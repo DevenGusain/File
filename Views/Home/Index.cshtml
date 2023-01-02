@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div  class="form-outline mb-4">
+        <table class="table table-responsive table-bordered">
+            <thead>                
+                <tr>
+                <th scope="col" colspan="2">Welcome to FMS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>                   
+                <td style="text-align:left;">
+                    <label class="form-label">User Name :</label>
+                    <input type="text"  placeholder="your user name" id="txtusername" class="form-control" asp-controller="" asp-action="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;">
+                    <label class="form-label">Password :</label>                    
+                    <input type="password" placeholder="your password" id="txtpassword" class="form-control" asp-controller="" asp-action="" />
+                    </td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>                    
+                    <td colspan="2" style="text-align:center;">                         
+                    <input type="submit" asp-action="" asp-controller="Home" class="btn btn-primary"  style="text-align:center; width:180px;"/>               
+                    <input type="reset" name="Reset" class="btn btn-primary" asp-action="" asp-controller="" style="width:180px;" />
+                    </td>
+                </tr>
+            </tfoot>
+
+        </table>
+    </div>
+
+

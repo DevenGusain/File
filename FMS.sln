@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMS", "FMS.csproj", "{8D740FCA-91D7-44D4-9A28-813F4E85310D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D740FCA-91D7-44D4-9A28-813F4E85310D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D740FCA-91D7-44D4-9A28-813F4E85310D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D740FCA-91D7-44D4-9A28-813F4E85310D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D740FCA-91D7-44D4-9A28-813F4E85310D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97C5FB97-2991-4AF0-AC97-4F613544040E}
+	EndGlobalSection
+EndGlobal

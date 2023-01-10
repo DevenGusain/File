@@ -12,12 +12,24 @@ build_property.RootNamespace = FMS
 build_property.ProjectDir = F:\ASP-WEBSITE\FMS\FMS\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = F:\ASP-WEBSITE\FMS\FMS
 build_property._RazorSourceGeneratorDebug = 
 
+[F:/ASP-WEBSITE/FMS/FMS/Views/File/AddFile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsZVxBZGRGaWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ASP-WEBSITE/FMS/FMS/Views/File/success.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsZVxzdWNjZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/ASP-WEBSITE/FMS/FMS/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ASP-WEBSITE/FMS/FMS/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/ASP-WEBSITE/FMS/FMS/Views/Home/Privacy.cshtml]
@@ -26,6 +38,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/ASP-WEBSITE/FMS/FMS/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ASP-WEBSITE/FMS/FMS/Views/Shared/_LayoutAfterLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZnRlckxvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ASP-WEBSITE/FMS/FMS/Views/Shared/_LayoutMain.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRNYWluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/ASP-WEBSITE/FMS/FMS/Views/Shared/_ValidationScriptsPartial.cshtml]

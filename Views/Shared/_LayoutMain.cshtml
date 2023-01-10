@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>@ViewData["Title"] - FMS</title>
+
+   <link href="~/css/layout_main.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="path/to/material-design-iconic-font/css/material-design-iconic-font.min.css">
+   
+    <link href="~/boot/bootstrap3.3.7.min.css" rel="stylesheet" />
+    <link href="~/boot/bootstrap-theme3.3.7.css" rel="stylesheet" />
+    <link href="~/boot/cdnbootstrap3.3.7.css" rel="stylesheet" />
+</head>
+
+
+
+<body>    
+    <div id="preloader">
+    </div>
+
+    <div id="viewport">
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <header>
+                <a href="#">FMS</a>
+            </header>
+            <ul class="nav">
+                <li>
+                    <a asp-controller="Home" asp-action="Index">
+                        <i class="zmdi zmdi-view-dashboard"></i> Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a asp-controller="Home" asp-action="Login">
+                        <i class="zmdi zmdi-account"></i> Login
+                    </a>
+                </li>
+               @* <li>
+                    <a asp-asp-controller="" asp-action="">
+                        <i class="zmdi zmdi-account"></i> Login
+                    </a>
+                </li>
+
+                <li>
+                    <a asp-controller="" asp-action="=">
+                        <i class="zmdi zmdi-widgets"></i> Overview
+                    </a>
+                </li>
+                <li>
+                    <a asp-controller="" asp-action="=">
+                        <i class="zmdi zmdi-calendar"></i> Events
+                    </a>
+                </li>
+                <li>
+                    <a asp-controller="" asp-action="=">
+                        <i class="zmdi zmdi-info-outline"></i> About
+                    </a>
+                </li>
+                <li>
+                    <a asp-controller="" asp-action="=">
+                        <i class="zmdi zmdi-settings"></i> Services
+                    </a>
+                </li>
+                <li>
+                    <a asp-controller="" asp-action="=">
+                        <i class="zmdi zmdi-comment-more"></i> Contact
+                    </a>
+                </li>
+
+                 <li>
+                    <a asp-controller="" asp-action="=">
+                        <i class="zmdi zmdi-logout"></i> Logout
+                    </a>
+                </li>*@
+
+            </ul>
+        </div>
+        <!-- Content -->
+        @RenderBody()
+    </div>
+
+    <script>
+            $(window).on('load', function () {
+                $('#preloader').delay(2000).fadeOut('slow', function () {
+                    $("#preloader").removeClass("hidden");
+                });
+            });    
+   
+   function preventBack() { window.history.forward(); }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+    </script>
+
+</body>
+</html>

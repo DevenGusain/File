@@ -1,0 +1,319 @@
+﻿@model droplist
+
+@{
+    ViewData["Title"] = "AddFile";
+    Layout = "~/Views/Shared/_LayoutAfterLogin.cshtml";
+}
+<nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">
+                        <i class="zmdi zmdi-notifications text-danger"></i>
+                    </a>
+                </li>
+                <li><a href="#">Welcome - @(@TempData.Peek("username").ToString().ToUpper())</a></li>
+            </ul>
+        </div>
+    </nav>
+<h1 style="text-align:center;">AddFile</h1>
+
+ <div class="container">
+
+<form class="well form-horizontal" asp-action="AddFile" asp-controller="File" method="post"  id="add_form">
+    
+<fieldset>
+
+<!-- Form Name -->
+<legend><center><h2><b>Entry Form</b></h2></center></legend><br>
+
+<!-- Text input-->
+
+    <div class="form-group">
+  <label class="col-md-4 control-label">File Id </label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="file_id" placeholder="File Id" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+    <div class="form-group">
+    <label class="col-md-4 control-label">File Name</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="file_name" placeholder="File Name" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+    <div class="form-group">
+                <label class="col-md-4 control-label" >File Number</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input name="file_no" placeholder="File Number" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+
+   
+
+    <div class="form-group">
+                <label class="col-md-4 control-label">Location</label>
+                <div class="col-md-4 selectContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>                                                
+                        @Html.DropDownListFor(x => x.loc_list,new SelectList(Model.loc_list,"Location","Location"),"-Select-",new {@class="form-control selectpicker"})
+                        
+                        @*<select name="section" class="form-control selectpicker" asp-for="location">
+                            <option value="">Select Location</option>
+                            <option value="1">Academics</option>
+                            <option value="2">Administration</option>
+                            <option value="3">Finance</option>
+                            <option value="4">IT</option>
+                        </select>*@
+                        
+                    </div>
+                    
+                </div>
+                <button class="btn btn-warning" name="Add" type="button" id="btn_location"> Add </button>
+            </div>            
+
+    <div class="form-group">
+                <label class="col-md-4 control-label">Section</label>
+                <div class="col-md-4 selectContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                        @Html.DropDownListFor(model => model.sec_list,new SelectList(Model.sec_list,"Section","Section"), "-Select-",new {@class="form-control selectpicker"})
+                        @*<select name="department" class="form-control selectpicker">
+                           <option value="0">Select Storage Type</option>
+                            <option value="1">Almirah - 1</option>
+                            <option value="2">Almirah - 2</option>
+                            <option value="3">Almirah - 3</option>
+                            <option value="4">Almirah - 4</option>
+                            <option value="4">Almirah - 5</option>
+                            <option value="4">Almirah - 6</option>
+                            <option value="4">Cupboard - 1</option>
+                            <option value="4">Cupboard - 2</option>
+                            <option value="4">Cupboard - 3</option>
+                            <option value="4">Cupboard - 4</option>
+                        </select>*@
+                    </div>
+                </div>
+                <button class="btn btn-warning" name="Add" type="button"> Add </button>
+            </div>
+
+    <div class="form-group">
+                <label class="col-md-4 control-label">Almirah</label>
+                <div class="col-md-4 selectContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                        @Html.DropDownListFor(model => model.alm_list,new SelectList(Model.alm_list,"Almirah_No","Almirah_No"),"-Select-", new {@class="form-control selectpicker"})
+                        @*<select name="part" class="form-control selectpicker">
+                            <option value="">Select Part</option>
+                            <option value="1">A</option>
+                            <option value="2">B</option>                            
+                        </select>*@
+                    </div>
+                </div>
+                <button class="btn btn-warning" name="Add" type="button"> Add </button>
+            </div>
+
+    <div class="form-group">
+                <label class="col-md-4 control-label">Part</label>
+                <div class="col-md-4 selectContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                        @Html.DropDownListFor(model => model.par_list,new SelectList(Model.par_list,"Part_No","Part_No"),"-Select-", new {@class="form-control selectpicker"})
+                        @*<select name="row" class="form-control selectpicker">                           
+                            <option value="">Select Row No.</option>
+                            <option value="1">Row - 1</option>
+                            <option value="2">Row - 2</option>                            
+                            <option value="3">Row - 3</option>
+                            <option value="4">Row - 4</option>
+                            <option value="5">Row - 5</option>
+                        </select>*@
+                    </div>
+                </div>
+                <button class="btn btn-warning" name="Add" type="button"> Add </button>
+            </div>
+
+    <div class="form-group">
+                <label class="col-md-4 control-label">Select Row No.</label>
+                <div class="col-md-4 selectContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                        @Html.DropDownListFor(model => model.rows_list,new SelectList(Model.rows_list,"Row_No","Row_No"),"-Select-", new {@class="form-control selectpicker"})
+                        @*<select name="col" class="form-control selectpicker">
+                            <option value="">Select Col. No</option>
+                            <option value="1">A</option>
+                            <option value="2">B</option>                            
+                            <option value="3">C</option>                            
+                        </select>*@
+                    </div>
+                </div>
+                <button class="btn btn-warning" name="Add" type="button"> Add </button>
+            </div>
+
+    <div class="form-group">
+                <label class="col-md-4 control-label">Select Col No.</label>
+                <div class="col-md-4 selectContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                        @Html.DropDownListFor(model => model.cols_list,new SelectList(Model.cols_list,"Col_No","Col_No"),"-Select-", new {@class="form-control selectpicker"})
+                      @* <select name="col" class="form-control selectpicker">
+                            <option value="">Select Col. No</option>
+                            <option value="1">A</option>
+                            <option value="2">B</option>                            
+                            <option value="3">C</option>                            
+                        </select>*@
+                    </div>
+                </div>
+                <button class="btn btn-warning" name="Add" type="button" > Add </button>
+            </div>
+
+
+<!-- Success message -->
+<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Success!.</div>
+
+    <!-- Button -->
+    <div class="form-group">
+        <label class="col-md-4 control-label"></label>
+        <div class="col-md-4"><br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" class="btn btn-warning" >
+               &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSUBMIT
+            <span class="@*glyphicon glyphicon-send*@"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+        </div>
+    </div>    
+</fieldset>
+</form>
+</div>
+
+<!-- /.container -->
+
+<style type="text/css">
+    #success_message{ display: none;}
+</style>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $()
+    });
+
+
+
+    $(document).ready(function () {
+        $('#contact_form').bootstrapValidator({
+            // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                file_id: {
+                    validators: {
+                        stringLength: {
+                            min: 2,
+                        },
+                        notEmpty: {
+                            message: 'Please enter file number
+                            
+                            '
+                        }
+                    }
+                },
+                file_name: {
+                    validators: {
+                        stringLength: {
+                            min: 2,
+                        },
+                        notEmpty: {
+                            message: 'Please enter file name'
+                        }
+                    }
+                },
+                file_no: {
+                    validators: {
+                        stringLength: {
+                            min: 2,
+                        },
+                        notEmpty: {
+                            message: 'Please enter file number'
+                        }
+                    }
+                },
+                user_password: {
+                    validators: {
+                        stringLength: {
+                            min: 8,
+                        },
+                        notEmpty: {
+                            message: 'Please enter your Password'
+                        }
+                    }
+                },
+                confirm_password: {
+                    validators: {
+                        stringLength: {
+                            min: 8,
+                        },
+                        notEmpty: {
+                            message: 'Please confirm your Password'
+                        }
+                    }
+                },
+                email: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Please enter your Email Address'
+                        },
+                        emailAddress: {
+                            message: 'Please enter a valid Email Address'
+                        }
+                    }
+                },
+                contact_no: {
+                    validators: {
+                        stringLength: {
+                            min: 12,
+                            max: 12,
+                            notEmpty: {
+                                message: 'Please enter your Contact No.'
+                            }
+                        }
+                    },
+                    department: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Please select your Department/Office'
+                            }
+                        }
+                    },
+                }
+            }
+        })
+            .on('success.form.bv', function (e) {
+                $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+                $('#contact_form').data('bootstrapValidator').resetForm();
+
+                // Prevent form submission
+                e.preventDefault();
+
+                // Get the form instance
+                var $form = $(e.target);
+
+                // Get the BootstrapValidator instance
+                var bv = $form.data('bootstrapValidator');
+
+                // Use Ajax to submit form data
+                $.post($form.attr('action'), $form.serialize(), function (result) {
+                    console.log(result);
+                }, 'json');
+            });
+       });
+</script>

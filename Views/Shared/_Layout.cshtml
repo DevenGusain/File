@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/FMS.styles.css" asp-append-version="true" />
 </head>
-<body>
-    <header>
+<body onunload="preventBack()">
+
+    <div id="preloader">
+    </div>
+ @*   <header>
         <div class="container" style="width:100%;">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FMS</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FMS </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -31,23 +34,24 @@
             </div>
         </nav>
         </div>
-    </header>
+    </header>*@
 
     
      <div class="container" style="width:100%;">
         @*Left side of the frame*@
-            <div class="left_sidebar">
+           @* <div class="left_sidebar">
                 <ul>
                 <li><a asp-controller="Home" asp-action="Index">Login</a></li>
+                <li><a asp-controller="Home" asp-action="" onclick="window.close()">Close</a></li>
                 <li><a>Menu-1</a></li>
                 <li><a>Menu-2</a></li>
                 <li><a>Menu-3</a></li>
                 <li><a>Menu-4</a></li>
                 </ul>
-            </div>
+        </div>>*@
             
             @*Right side of the frame*@
-            <div class="right_sidebar">             
+            <div @*class="right_sidebar"*@>             
                 
                     @RenderBody()
                 
@@ -55,14 +59,31 @@
     </div>
     
     <div class="container">
-            <footer class="footer">               
-                    &copy; 2022 - FMS - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>               
-            </footer>
-        </div>
+            <footer class="footer">
+            <a asp-area="" asp-controller="Home" asp-action="Privacy">&copy; 2022 - FMS - NESTS</a>
+        </footer>
+    </div>
     
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
    
+    <script>
+       $(window).on('load', function(){
+            $('#preloader').delay(2000).fadeOut('slow', function(){
+            $("#preloader").removeClass("hidden");
+            });
+        });
+
+
+
+        
+            function preventBack() { window.history.forward(); }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+    
+    </script>
+
+
 </body>
 </html>

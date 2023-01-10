@@ -1,6 +1,13 @@
-﻿namespace FMS.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+
+namespace FMS.Models
 {
-    public class DbModelBuilder
+    public class DbModelBuilder : DbContext
     {
+
+        public DbModelBuilder()  : base() { }
+     
+     
     }
 }

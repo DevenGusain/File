@@ -15,9 +15,20 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
-  width:100%;
-  height:100% !important;
+    margin-bottom: 60px;
+    width: 100%;
+    height: 100% !important;
+    background-color: #0e1c36;
+}
+
+#preloader 
+{
+    background :  #000 url(../images/loader.gif) no-repeat center center;
+    position: fixed;
+    background-size: 25%;
+    height : 100vh;
+    width:100%;
+    z-index: 100;
 }
 
 .left_sidebar {
@@ -27,7 +38,7 @@ body {
     width: 20%;
     margin: 0;
     overflow: hidden;    
-    border-right:none;    
+    /*border-right:none;  */   
 }
 
     .left_sidebar ul li {

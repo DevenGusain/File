@@ -3,10 +3,20 @@ using Microsoft.Extensions.Configuration;
 using System;
 using System.Data.Common;
 using System.Configuration;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+
+builder.Services.AddSession(Options => {
+    Options.IdleTimeout = TimeSpan.FromMinutes(30);
+    });
+
+
 // Add services to the container.
+
+
 builder.Services.AddControllersWithViews();
 
 
@@ -24,9 +34,14 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+
+
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",

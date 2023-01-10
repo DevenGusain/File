@@ -5,12 +5,44 @@
       "PackagePath": "staticwebassets\\FMS.bundle.scp.css"
     },
     {
+      "Id": "F:\\ASP-WEBSITE\\FMS\\FMS\\wwwroot\\boot\\bootstrap-theme3.3.7.css",
+      "PackagePath": "staticwebassets\\boot\\bootstrap-theme3.3.7.css"
+    },
+    {
+      "Id": "F:\\ASP-WEBSITE\\FMS\\FMS\\wwwroot\\boot\\bootstrap3.3.7.min.css",
+      "PackagePath": "staticwebassets\\boot\\bootstrap3.3.7.min.css"
+    },
+    {
+      "Id": "F:\\ASP-WEBSITE\\FMS\\FMS\\wwwroot\\boot\\cdnbootstrap3.3.7.css",
+      "PackagePath": "staticwebassets\\boot\\cdnbootstrap3.3.7.css"
+    },
+    {
+      "Id": "F:\\ASP-WEBSITE\\FMS\\FMS\\wwwroot\\css\\layout_main.css",
+      "PackagePath": "staticwebassets\\css\\layout_main.css"
+    },
+    {
       "Id": "F:\\ASP-WEBSITE\\FMS\\FMS\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "F:\\ASP-WEBSITE\\FMS\\FMS\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "F:\\ASP-WEBSITE\\FMS\\FMS\\wwwroot\\images\\fms.png",
+      "PackagePath": "staticwebassets\\images\\fms.png"
+    },
+    {
+      "Id": "F:\\ASP-WEBSITE\\FMS\\FMS\\wwwroot\\images\\loader.gif",
+      "PackagePath": "staticwebassets\\images\\loader.gif"
+    },
+    {
+      "Id": "F:\\ASP-WEBSITE\\FMS\\FMS\\wwwroot\\images\\locker.jpg",
+      "PackagePath": "staticwebassets\\images\\locker.jpg"
+    },
+    {
+      "Id": "F:\\ASP-WEBSITE\\FMS\\FMS\\wwwroot\\images\\logo_emrs.png",
+      "PackagePath": "staticwebassets\\images\\logo_emrs.png"
     },
     {
       "Id": "F:\\ASP-WEBSITE\\FMS\\FMS\\wwwroot\\js\\site.js",
